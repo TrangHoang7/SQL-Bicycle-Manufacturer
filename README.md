@@ -1,10 +1,11 @@
 # SQL-Bicycle-Manufacturer
-# Dataset: adventureworks2019
-# Data Dictionary: https://drive.google.com/file/d/1bwwsS3cRJYOg1cvNppc1K_8dQLELN16T/view?usp=share_link
-# The goal of project:
+## Dataset: adventureworks2019
+## Data Dictionary: https://drive.google.com/file/d/1bwwsS3cRJYOg1cvNppc1K_8dQLELN16T/view?usp=share_link
+## The goal of project:
 
-# Question:
---Q1
+## Question:
+-Q1: Calc Quantity of items, Sales value & Order quantity by each Subcategory in L12M
+```
 SELECT 
   FORMAT_TIMESTAMP("%b %Y ", sale.ModifiedDate) AS Period,
   sub.Name AS Name,
@@ -19,3 +20,4 @@ LEFT JOIN 'adventureworks2019.Production.ProductSubcategory' AS sub
 WHERE DATE(sale.ModifiedDate) BETWEEN (DATE_SUB('2014-06-30', INTERVAL 12 month)) AND '2014-06-30'
 GROUP BY 1 , 2 
 ORDER BY Period DESC, Name;
+```
