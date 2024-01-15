@@ -1,8 +1,6 @@
 # SQL-Bicycle-Manufacturer
 ## Dataset: adventureworks2019
 ## Data Dictionary: https://drive.google.com/file/d/1bwwsS3cRJYOg1cvNppc1K_8dQLELN16T/view?usp=share_link
-## The goal of project:
-
 ## Question:
 -Q1: Calc Quantity of items, Sales value & Order quantity by each Subcategory in L12M
 ```
