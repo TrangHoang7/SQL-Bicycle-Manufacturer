@@ -54,9 +54,7 @@ WITH ranking AS(
     YR,
     TerritoryID,
     Order_quantity,
-    dense_RANK()OVER(partition by YR ORDER BY  Order_quantity desc) as rk
-    --RANK()OVER(partition by YR ORDER BY  Order_quantity desc) as rk
-    --> mình nên thay bằng dense_rank để luôn đảm bảo k bị skip rank
+    DENSE_RANK()OVER(partition by YR ORDER BY  Order_quantity desc) as rk
   FROM 
     (SELECT 
       TerritoryID,
